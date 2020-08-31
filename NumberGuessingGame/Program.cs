@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CalculatorApp
+namespace NumberGuessingGame
 {
     class Program
     {

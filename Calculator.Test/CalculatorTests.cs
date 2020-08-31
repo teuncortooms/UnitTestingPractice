@@ -1,6 +1,7 @@
+using CalculatorApp;
 using NUnit.Framework;
 
-namespace Calculator.Test
+namespace CalculatorTests
 {
     public class CalculatorTests
     {
