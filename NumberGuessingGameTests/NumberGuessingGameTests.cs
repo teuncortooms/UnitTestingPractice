@@ -19,6 +19,14 @@ namespace NumberGuessingGameTests
         }
 
         [TestMethod]
+        public void Create_Game()
+        {
+            Game g = new Game();
+
+            Assert.IsInstanceOfType(g, typeof(Game));
+        }
+
+        [TestMethod]
         public void Start_should_set_boundaries()
         {
             Game g = new Game();
@@ -45,7 +53,7 @@ namespace NumberGuessingGameTests
             g.Start(1, 1);
             bool result = g.Guess(1);
 
-            Assert.AreEqual(true, result);
+            Assert.IsTrue(result);
         }
 
         [TestMethod]
@@ -83,7 +91,7 @@ namespace NumberGuessingGameTests
                 g.Start(1, 10);
                 g.Guess(2);
             }
-            while (g.HasWon);
+            while (g.HasWon); // redo if you win on first try
 
             Assert.ThrowsException<DuplicateGuessException>(() => g.Guess(2));
         }
@@ -95,6 +103,8 @@ namespace NumberGuessingGameTests
 
             g.Start(-3, 0);
             bool result = g.Guess(-2);
+
+            // Assert Success
         }
     }
 }
