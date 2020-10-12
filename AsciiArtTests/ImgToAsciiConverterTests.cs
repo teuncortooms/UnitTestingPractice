@@ -8,34 +8,23 @@ namespace AsciiArtTests
     public class ImgToAsciiConverterTests
     {
         [TestMethod]
-        public void Get_width_and_height_for_default_image_should_return_bigger_than_0()
+        public void Get_height()
         {
-            ImgToAsciiConverter c = new ImgToAsciiConverter();
+            IImageGetter g = new MockImageGetter();
 
-            c.SetDefaultImage();
+            var img = g.GetDefaultImage(300, 600);
 
-            Assert.IsTrue(0 < c.Height);
-            Assert.IsTrue(0 < c.Width);
+            Assert.AreEqual(300, img.Height);
         }
 
         [TestMethod]
-        public void Get_width_for_default_image_returns_700()
+        public void Get_width()
         {
-            ImgToAsciiConverter c = new ImgToAsciiConverter();
+            IImageGetter g = new MockImageGetter();
 
-            c.SetDefaultImage();
+            var img = g.GetDefaultImage(300, 600);
 
-            Assert.AreEqual(700, c.Width);
-        }
-
-        [TestMethod]
-        public void Get_height_for_default_image_returns_467()
-        {
-            ImgToAsciiConverter c = new ImgToAsciiConverter();
-
-            c.SetDefaultImage();
-
-            Assert.AreEqual(467, c.Height);
+            Assert.AreEqual(600, img.Width);
         }
     }
 }

@@ -12,7 +12,9 @@ namespace NumberGuessingGameTests
         private bool[] GuessMany(Game g, int[] inputs)
         {
             List<bool> results = new List<bool>();
-            inputs.ToList().ForEach(input => results.Add(g.Guess(input)));
+            inputs.ToList().ForEach(input =>
+                results.Add(g.Guess(input))
+            );
             return results.ToArray();
         }
 

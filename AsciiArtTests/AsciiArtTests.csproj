@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ASCII_art\AsciiArt.csproj" />
+    <ProjectReference Include="..\AsciiArt\AsciiArt.csproj" />
   </ItemGroup>
 
 </Project>

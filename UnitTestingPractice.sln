@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30406.217
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator", "UnitTestingTutorial\Calculator.csproj", "{85695D7A-2F03-4071-8ADF-EA23F600B4A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator", "Calculator\Calculator.csproj", "{85695D7A-2F03-4071-8ADF-EA23F600B4A7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculatorTests", "Calculator.Test\CalculatorTests.csproj", "{420B476A-869F-4117-B0C6-801036A2E653}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculatorTests", "CalculatorTests\CalculatorTests.csproj", "{420B476A-869F-4117-B0C6-801036A2E653}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stack", "Stack\Stack.csproj", "{B567ACB7-9127-423D-8615-3DA3D16B3EFA}"
 EndProject
@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumberGuessingGame", "Numbe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumberGuessingGameTests", "NumberGuessingGameTests\NumberGuessingGameTests.csproj", "{27AAF787-9B54-438F-8061-FCC6DCDED673}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsciiArt", "ASCII_art\AsciiArt.csproj", "{DF750BFF-E454-445C-82AF-D94083AC1067}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsciiArt", "AsciiArt\AsciiArt.csproj", "{DF750BFF-E454-445C-82AF-D94083AC1067}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsciiArtTests", "AsciiArtTests\AsciiArtTests.csproj", "{B4F8160A-02A6-4B7E-98A1-4D258F8F8CD2}"
 EndProject
