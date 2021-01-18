@@ -5,8 +5,8 @@ namespace StackNamespace
 {
     public class Stack<T>
     {
-        private int maximumLength;
-        private T[] stackArray;
+        private readonly int maximumLength;
+        private readonly T[] stackArray;
 
         public int Size { get; private set; }
 

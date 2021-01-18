@@ -6,8 +6,8 @@ namespace RomanNumeralConverterNamespace
 {
     public class RomanNumeralConverter
     {
-        int maxInput = 3000;
-        List<KeyValuePair<string, int>> romans = new List<KeyValuePair<string, int>>
+        private readonly int maxInput = 3000;
+        private readonly List<KeyValuePair<string, int>> romans = new List<KeyValuePair<string, int>>
         {
             new KeyValuePair<string, int> ( "M", 1000 ),
             new KeyValuePair<string, int> ( "D", 500 ),

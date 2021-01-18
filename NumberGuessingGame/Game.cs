@@ -24,7 +24,7 @@ namespace NumberGuessingGame
             answer = (new Random()).Next(LowerBoundary, UpperBoundary + 1);
         }
 
-        public bool Guess(int input)
+        public int Guess(int input)
         {
             if (input < LowerBoundary || input > UpperBoundary)
                 throw new ArgumentOutOfRangeException();
@@ -34,13 +34,21 @@ namespace NumberGuessingGame
                 throw new DuplicateGuessException();
 
             GuessCount++;
-            if (input == answer)
+            SavedGuesses.Add(input);
+
+            if (input < answer)
+            {
+                return -1;
+            }
+            else if (input > answer)
+            {
+                return 1;
+            }
+            else
             {
                 HasWon = true;
-                return true;
+                return 0;
             }
-            SavedGuesses.Add(input);
-            return false;
         }
     }
 }

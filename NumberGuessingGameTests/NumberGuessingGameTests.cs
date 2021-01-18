@@ -9,9 +9,9 @@ namespace NumberGuessingGameTests
     [TestClass]
     public class NumberGuessingGameTests
     {
-        private bool[] GuessMany(Game g, int[] inputs)
+        private int[] GuessMany(Game g, int[] inputs)
         {
-            List<bool> results = new List<bool>();
+            List<int> results = new List<int>();
             inputs.ToList().ForEach(input =>
                 results.Add(g.Guess(input))
             );
@@ -51,9 +51,9 @@ namespace NumberGuessingGameTests
             Game g = new Game();
 
             g.Start(1, 1);
-            bool result = g.Guess(1);
+            int result = g.Guess(1);
 
-            Assert.IsTrue(result);
+            Assert.AreEqual(0, result);
         }
 
         [TestMethod]
@@ -74,8 +74,8 @@ namespace NumberGuessingGameTests
 
             void guessAllPossibilitiesTwice()
             {
-                bool[] results = GuessMany(g, new int[] { 1, 2, 3 });
-                bool[] results2 = GuessMany(g, new int[] { 1, 2, 3 });
+                int[] results = GuessMany(g, new int[] { 1, 2, 3 });
+                int[] results2 = GuessMany(g, new int[] { 1, 2, 3 });
             }
 
             Assert.ThrowsException<GameOverException>(() => guessAllPossibilitiesTwice());
@@ -102,7 +102,7 @@ namespace NumberGuessingGameTests
             Game g = new Game();
 
             g.Start(-3, 0);
-            bool result = g.Guess(-2);
+            int result = g.Guess(-2);
 
             // Assert Success
         }
